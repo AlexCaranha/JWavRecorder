@@ -75,13 +75,10 @@ public class VMain extends JFrame{
         int height = 500;
               
 	VMain objScreen = new VMain("JWavRecorder", width, height);
-        objScreen.centering();
-        objScreen.setVisible(false);
-        objScreen.addObject(new JWavRecorder(width, height, objScreen.getContentPane()), BorderLayout.CENTER);
-	objScreen.setResizable(false);
-        objScreen.pack();        
-        objScreen.setSize(width, height);
-        objScreen.setVisible(true);
+        objScreen.setResizable(false);
         objScreen.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        objScreen.addObject(new JWavRecorder(width, height, objScreen.getContentPane()), BorderLayout.CENTER);
+        objScreen.setVisible(true);
+        objScreen.centering();
     }
 }
